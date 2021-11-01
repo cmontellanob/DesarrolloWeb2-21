@@ -1,0 +1,96 @@
+#contenido {
+    width: 900px;
+    background-color: #f2f2f2;
+    margin: auto;
+    border: 1px solid rgb(204, 204, 204);
+}
+#encabezado{
+    width: 900px;
+    height: 100px;
+    background-color: green;
+    margin: auto;
+    border: 1px solid rgb(204, 204, 204);
+}
+#logo{
+    width: 200px;
+    float: left;
+    margin-left: 100px;
+}
+#universidad{
+    width: 600px;
+    float: left;
+    color: rgb(206, 23, 23);
+    font-size: 20px;
+    font-weight: bold;
+ 
+}
+#facultad{
+    color:blue;
+}
+#sucre{
+    margin-left: 30px;
+}
+#sistemas{
+    clear: both;
+    padding-left: 20px;
+}
+#izquierda{
+    float: left;
+    width: 150px;
+    
+}
+#centro{
+    float: left;
+    width: 600px;
+    height: 300px;
+    color: black;
+    
+}
+#derecha{
+    float: left;
+    width: 150px;
+    
+}
+#pie{
+    clear: both;
+    background-color: rgb(28, 142, 146);
+    color: white;
+    text-align: center;
+}
+
+ul.menu {
+    list-style: none;
+margin: 10px;
+padding: 0;
+border-left:1px solid #7C7C7C;
+ 
+}
+
+ul.menu li a:link, ul.menu li a:visited {
+padding: .3em;
+display: block;
+text-decoration: none;
+color: #333;
+background: #F4F4F4;
+border-top:1px solid #7C7C7C;
+border-right:1px solid #7C7C7C;
+border-bottom:1px solid #9C9C9C;
+}
+ul.menu li a:hover{
+	background-color: #FC0;
+}
+
+.rojo{
+    background-color: red;
+    width: 250px;
+}
+.celeste{
+    background-color: rgb(0, 191, 255);
+    width: 250px;
+}
+.blanco{
+    background-color: white;
+    width: 250px;
+}
+
+

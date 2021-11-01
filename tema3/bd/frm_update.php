@@ -18,7 +18,15 @@
   $resultado_ciudades = mysqli_query($conn, $sql);
 
   ?>
-  <form action="update.php" method="POST">
+
+  <form action="update.php" method="POST" enctype="multipart/form-data">
+    <div>
+    <img src="images/<?php echo $fila['fotografia']; ?>" alt="" width="100px">
+    </div>
+    <label for="nobre">Fotografia</label>
+        <input type="file" name="fotografia"> <br>    
+    
+
     <input type="hidden" name="id" value="<?php echo $id ?>">
     <label for="nobre">Nombre</label>
     <input type="text" name="nombre" value="<?php echo $fila['nombre'] ?>"> <br>

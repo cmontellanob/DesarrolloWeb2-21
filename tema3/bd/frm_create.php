@@ -14,8 +14,10 @@
     $resultado = mysqli_query($conn, $sql);
     ?>
 
-    <form action="create.php" method="POST">
-        <label for="nobre">Nombre</label>
+    <form action="create.php" method="POST" enctype="multipart/form-data">
+    <label for="nobre">Fotografia</label>
+        <input type="file" name="fotografia"> <br>    
+    <label for="nobre">Nombre</label>
         <input type="text" name="nombre"> <br>
         <label for="ciudad">Ciudad</label>
         <select name="idciudad">

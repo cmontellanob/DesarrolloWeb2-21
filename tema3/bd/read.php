@@ -10,27 +10,28 @@
 
 <body>
     <?php include 'conexion.php';
-    $sql = "SELECT nombre,lugares.id,ciudad,direccion,telefono,correoelectronico FROM lugares 
+    $sql = "SELECT fotografia,nombre,lugares.id,ciudad,direccion,telefono,correoelectronico FROM lugares 
     left join ciudades on lugares.idciudad=ciudades.id";
     if (isset($_GET['buscar'])) {
         $buscar = $_GET['buscar'];
         $sql .= " WHERE nombre LIKE '%$buscar%'";
     }
     if (isset($_GET['orden'])) {
-        $sql .= " ORDER BY ".$_GET['orden'];
+        $sql .= " ORDER BY " . $_GET['orden'];
     }
-    
-   
+
+
     $resultado = mysqli_query($conn, $sql);
     ?>
     <form action="read.php" method="GET">
         <label for="buscar">nombre a buscar</label>
-        <input type="text" name="buscar" value="<?php echo isset($buscar)?$buscar:''; ?>">
+        <input type="text" name="buscar" value="<?php echo isset($buscar) ? $buscar : ''; ?>">
         <input type="submit" value="buscar">
     </form>
     <table border="1">
         <tr>
-            <th><a href="read.php?orden=nombre">Nombre</a>      </th>
+            <th>Fotografia </th>
+            <th><a href="read.php?orden=nombre">Nombre</a> </th>
             <th><a href="read.php?orden=ciudad">Ciudad</a> </th>
             <th><a href="read.php?orden=direccion">Dirección</a> </th>
             <th><a href="read.php?orden=telefono">Teléfono</a> </th>
@@ -40,6 +41,7 @@
         </tr>
         <?php while ($fila = mysqli_fetch_array($resultado)) { ?>
             <tr>
+            <td><img src="images/<?php echo $fila['fotografia']; ?>" alt="" width="100px"></td>
                 <td><?php echo $fila['nombre']; ?></td>
                 <td><?php echo $fila['ciudad']; ?></td>
                 <td><?php echo $fila['direccion']; ?></td>
