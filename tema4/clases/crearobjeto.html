@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    function coche(marca, modelo, color) {
+        this.marca = marca
+        this.modelo = modelo
+        this.color = color
+        this.mostrar = MostrarCoche;
+    }
+    function MostrarCoche() {
+       document.write("El autos marca " + this.marca + " y modelo " + this.modelo);
+    }
+    var coche1 = new coche("Ford", "Fiesta", "Rojo");
+    coche1.mostrar();
+</script>

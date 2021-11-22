@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Dias</h2>
+<script>
+    dias = new Array("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo");
+    meses =["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+    for(i=0;i<dias.length;i++){
+        document.write(dias[i]+"<br>");
+    }
+</script>
+<h2>Meses</h2>
+<script>
+        for(i=0;i<meses.length;i++){
+        document.write(meses[i]+"<br>");
+     
+       
+        }   
+        document.write("<h2>Otra forma de recorrer</h2>"); 
+        for(dia in dias){
+            document.write(dias[dia]+"<br>");
+        }
+    
+
+</script>
+<h3>Arreglo diferente valores</h3>
+<script>
+    var variable3 = new Array(2, "hola", true, 45.34);
+    for(i=0;i<variable3.length;i++){
+        document.write(variable3[i]+"<br>");
+    }
+    console.log(variable3);
+    console.log(dias);
+    console.log(meses);
+</script>    
+</body>
+</html>
