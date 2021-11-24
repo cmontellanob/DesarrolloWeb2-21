@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="A">A</label>
+    <input type="number" name="A" id="A"> <br>
+    <label for="B">B</label>
+    <input type="number" name="B" id="B"> <br>
+    <button onclick="sumar()">Sumar</button>
+    <div id="resultado"></div>
+    <script>
+        function sumar() {
+            var a = document.getElementsByName("A");
+            var b = document.getElementsByName("B");
+
+            var suma = parseInt(a[0].value) + parseInt(b[0].value);
+            document.getElementById("resultado").innerHTML = suma;
+            document.getElementById("resultado").style.border = "1px solid red";
+            document.getElementById("resultado").style.width="100px";
+        }
+    </script>
+
+</body>
+
+</html>

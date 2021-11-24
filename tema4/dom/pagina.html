@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina sencilla</title>
+</head>
+<body>
+    <p>Esta página es <strong>muy sencilla</strong></p>
+    <p>Esta página es <strong>muy sencilla</strong></p>
+    <p>Esta página es <strong>muy sencilla</strong></p>
+    <p>Esta página es <strong>muy sencilla</strong></p>
+
+</body>
+<script>
+   var  parrafos = document.getElementsByTagName("p");
+    for (var i = 0; i < parrafos.length; i++) {
+        if (i%2==0) {
+            parrafos[i].style.color = "red";
+        }
+        else {
+            parrafos[i].style.color = "blue";
+        }
+        
+    }
+    document.write("existen "+parrafos.length+" parrafos en esta pagina");
+</script>
+</html>
