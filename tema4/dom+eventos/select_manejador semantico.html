@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="deptos" >
+        <option value="">Seleccione un departamento</option>
+        <option value="1">Chuquisaca</option>
+        <option value="2">La Paz </option>
+        <option value="3">Cochabamba 3</option>
+        <option value="4">Oruro</option>
+        <option value="5">Potosi</option>
+        <option value="6">Tarija</option>
+        <option value="7">Santa Cruz</option>
+        <option value="8">Beni</option>
+        <option value="9">Pando</option>
+    </select>
+
+    <div id="resultado"  ></div>
+    <script>
+        document.getElementById("deptos").onchange=cargarDeptos;
+      
+        function cargarDeptos(){
+            var deptos = document.getElementById('deptos');
+            var resultado = document.getElementById('resultado');
+            var opcion = deptos.options[deptos.selectedIndex];
+            resultado.innerHTML =  opcion.innerHTML
+            //resultado.innerHTML =  deptos.options[deptos.selectedIndex].innerHTML
+        }
+    </script>
+</body>
+</html>

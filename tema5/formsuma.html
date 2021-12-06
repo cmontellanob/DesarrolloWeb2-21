@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="a">A</label><input type="number" name="a" id="a"> <br>
+    <label for="b">B</label><input type="number" name="b" id="b"> <br>
+    <input type="button" value="Sumar" onclick="sumar()">
+    <input type="button" value="Sumar post" onclick="sumarPost()">
+    <div id="resultado" style="background-color: cyan; width: 200;height: 50;">&nbsp;</div>
+    
+    <script>
+        function sumar(){
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function(){
+                if (this.readyState==4 && this.status==200){
+                    document.getElementById("resultado").innerHTML=this.responseText;
+                }
+            };
+            var url="suma.php?a="+a+"&b="+b;
+            xhttp.open("GET",url,true);
+            xhttp.send();
+        }
+        function sumarPost(){
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function(){
+                if (this.readyState==4 && this.status==200){
+                    document.getElementById("resultado").innerHTML=this.responseText;
+                }
+            };
+            
+            var parametros="a="+a+"&b="+b;
+            xhttp.open("POST","sumapost.php",true);
+            xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            xhttp.send(parametros);
+        }
+    </script>
+</body>
+</html>
